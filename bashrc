@@ -166,13 +166,13 @@ fi
 # Theme modifications
 if [ "$OSH_THEME" = "minimal" ]; then
     add_dollar_to_min(){
-        PS1+="\033[1;33m$\033[0m "
+        PS1+="${_omb_prompt_yellow}\$${_omb_prompt_reset_color} "
     }
     add_arrow_to_min(){
         if [ $? -ne 0 ]; then
-            PS1="\033[0;31m→\033[0m ${PS1}"
+            PS1="${_omb_prompt_red}→${_omb_prompt_reset_color} ${PS1}"
         else
-            PS1="\033[0;32m→\033[0m ${PS1}"
+            PS1="${_omb_prompt_green}→${_omb_prompt_reset_color} ${PS1}"
         fi
     }
     _omb_util_add_prompt_command add_dollar_to_min
