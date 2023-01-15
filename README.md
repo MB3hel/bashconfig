@@ -9,7 +9,7 @@ This repo holds my bash configuration.
 
 ```sh
 
-# Load generic zsh configuration
+# Load generic bash configuration
 . ~/.bashconfig/bashrc
 
 # System specific Environment Variables & other settings below
