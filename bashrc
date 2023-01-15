@@ -179,6 +179,7 @@ if [ "$OSH_THEME" = "minimal" ]; then
             PS1="${_omb_prompt_green}→${_omb_prompt_reset_color} ${PS1}"
         fi
     }
+    PROMPT_COMMAND=${PROMPT_COMMAND:+"$PROMPT_COMMAND; "}'echo -en "\033]0; $(dirs +0) \a"'
     _omb_util_add_prompt_command add_dollar_to_min
     _omb_util_add_prompt_command add_arrow_to_min
 fi
