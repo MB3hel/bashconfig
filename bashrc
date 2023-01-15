@@ -182,9 +182,9 @@ if [ "$OSH_THEME" = "minimal" ]; then
 fi
 
 # Aliases and functions
-if [[ "$OSTYPE" = 'msys'* ]]; then
-    alias open='$HOME/.zshconfig/msys2_open.sh'
-elif [[ "$OSTYPE" != 'darwin'* ]]; then
+if [ "$(uname -o)" = "Msys" ]; then
+    alias open='$HOME/.bashconfig/msys2_open.sh'
+elif [ "$(uname -o)" != "Darwin" ]; then
     open(){
         nohup xdg-open "$*" > /dev/null 2>&1
     }
