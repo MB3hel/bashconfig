@@ -1,5 +1,7 @@
 # bashconfig
 
+**MOVED TO [shellconfig](https://github.com/MB3hel/shellconfig) repo!**
+
 This repo holds my bash configuration.
 
 ## Installation
